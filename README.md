@@ -5,9 +5,7 @@ MemoMaster is a fun and interactive memory game built with HTML, CSS, and JavaSc
 - **16 Boxes, 8 Pairs**: The game board consists of 16 boxes with 8 pairs of emojis hidden within.
 - **Randomized Layout**: Each game shuffle the emojis, giving you a fresh challenge each time.
 - **Attempts Counter**: Track the number of attempts taken to complete the game.
-- **Best Score Tracker**: Your best score is saved locally, challenging you to beat your previous record.
 - **Background Music**: Enjoy some background music to enhance your gaming experience.
-- **Responsive Design**: The game fits on the screen without the need to scroll.
 
 ## How to Play
 1. Click on a box to reveal the emoji hidden underneath.
