@@ -1,156 +1,154 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f7fafc;
-    color: #2d3748;
-    min-height: 100vh;
-    margin: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .game-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: #2b6cb0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
- 
-  .score {
-    font-size: 1.2rem;
-    color: #4a5568;
-    margin-bottom: 20px;
-    background-color: #edf2f7;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7fafc;
+  color: #2d3748;
+  min-height: 100vh;
+  margin: 20px;
+}
 
-  .game-container {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
-  }
-  
- 
-  .box {
-    background-color: #2b6cb0;
-    color: #ffffff;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-  }
-  
-  .box.revealed {
-    background-color: #48bb78;
-  }
-  
-  .box.matched {
-    background-color: #38a169;
-    cursor: default;
-  }
-  
 
-  .box.clicked {
-    animation: shake 0.3s ease-in-out;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Gaming-stylish font */
+.game-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  color: #2b6cb0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  text-align: center;
+}
 
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-  }
-  
 
-  .refresh-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    background-color: #4299e1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-  }
-  
-  .refresh-button:hover {
-    background-color: #2b6cb0;
-  }
-  
+.score {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 20px;
+  background-color: #edf2f7;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .modal-content h2 {
-    color: #48bb78;
-    font-size: 2rem;
-  }
-  
-  .modal-content p {
-    font-size: 1.2rem;
-    color: #4a5568;
-    margin: 10px 0;
-  }
-  
-  .modal-content button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #48bb78;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .modal-content button:hover {
-    background-color: #38a169;
-  }
-  
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 10px;
+}
+
+
+.box {
+  background-color: #2b6cb0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.box.revealed {
+  background-color: #48bb78;
+}
+
+.box.matched {
+  background-color: #38a169;
+  cursor: default;
+}
+
+.box.clicked {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+
+.refresh-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Press Start 2P', cursive; 
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #2b6cb0;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content h2 {
+  color: #48bb78;
+  font-size: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin: 10px 0;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #38a169;
+}
