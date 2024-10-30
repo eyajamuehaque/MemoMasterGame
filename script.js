@@ -1,4 +1,4 @@
-const emojis = ["🙂", "😉", "😆", "😂", "😍", "😘", "😎", "🤔"];
+const emojis = ["🐼", "🐶", "🐞", "🦀", "🦋", "🐔", "🐦", "🐋"];
 let shuffledEmojis = [];
 let firstPick = null;
 let secondPick = null;
